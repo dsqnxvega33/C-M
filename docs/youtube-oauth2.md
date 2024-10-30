@@ -72,6 +72,14 @@ to the console a few seconds later:
 JMusicBot is now signed in and will store the credentials
 in a new `youtubetoken.txt` file. 
 
+!!! note
+
+    If JMusicBot fails to write that file, it will instead log the message
+    "Failed to write the YouTube OAuth2 refresh token to storage! You will
+    need to authorize again on the next reboot."
+
+    Ensure JMusicBot can write files, then restart the bot & login again.
+
 ## FAQ
 
 ### I get asked to enter a phone number when registering on Google!
