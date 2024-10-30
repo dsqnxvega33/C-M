@@ -209,6 +209,7 @@ public class AudioHandler extends AudioEventAdapter implements AudioSendHandler
         if (
             exception.getMessage().equals("Sign in to confirm you're not a bot")
             || exception.getMessage().equals("Please sign in")
+            || exception.getMessage().equals("This video requires login.")
         )
             LOGGER.error(
                 "Track {} has failed to play: {}"
