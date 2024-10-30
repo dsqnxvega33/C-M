@@ -9,8 +9,8 @@ You can give JMusicBot access your Google account to help with
 playing back YouTube tracks.
 
 This is only need to sign in if you wish to play age-restricted videos,
-or are experiencing the "Sign in to confirm you're not a bot" error.
-Outside of that, signing in is unnecessary.
+or are experiencing the "Please sign in" error. Outside of that, signing in
+is unnecessary.
 
 !!! danger
 
