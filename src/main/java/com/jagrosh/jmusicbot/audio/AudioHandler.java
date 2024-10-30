@@ -212,8 +212,9 @@ public class AudioHandler extends AudioEventAdapter implements AudioSendHandler
             || exception.getMessage().equals("This video requires login.")
         )
             LOGGER.error(
-                "Track {} has failed to play: {}"
-                + "You will need to sign in to Google to play YouTube tracks. More info: https://jmusicbot.com/youtube-oauth2",
+                "Track {} has failed to play: {}. "
+                + "You will need to sign in to Google to play YouTube tracks. "
+                + "More info: https://jmusicbot.com/youtube-oauth2",
                 track.getIdentifier(),
                 exception.getMessage()
             );
