@@ -72,7 +72,40 @@ to the console a few seconds later:
 JMusicBot is now signed in and will store the credentials
 in a new `youtubetoken.txt` file. 
 
-## Signing out
+## FAQ
+
+### I get asked to enter a phone number when registering on Google!
+
+You should try the following:
+
+- If you are using a VPN, disable it.
+- When prompted if you want a new Gmail account, use your own
+  Email address instead.
+
+If these don't work, it *should* be okay for you to use your phone number.
+Using your phone number for verification won't directly tie it to the account,
+so bans won't reach out to other Google accounts. The only caveat is that
+there is a limit to how many Google accounts a phone number can verify.
+
+### What causes the sign in issue to appear?
+
+We believe that Google has begun identifying & blocking IP address ranges (ASNs)
+that come from server host providers (such as DigitalOcean, OVH, Hetzner etc.)
+and other sources that excessively load videos on YouTube.
+
+### What is this workaround of signing in to a Google account? Is it rsiky?
+
+Using traditional workarounds, like cookies, is known to be risky on YouTube
+and gets Google accounts banned quickly.
+However, this (mostly riskless) workaround has been found, in which you
+"sign in" to a Google account as a device/TV using OAuth2.
+
+There have been no confirmed cases of Google accounts getting banned using 
+this workaround so far. However, it is still heavily encouraged to use a
+new Google account for this, as Google could detect this workaround at any time
+and ban Google accounts that abuse it.
+
+### How do I sign out?
 
 To sign out, manually delete the `youtubetoken.txt` and restart JMusicBot.
 
