@@ -41,7 +41,7 @@ public class BotConfig
     private Path path = null;
     private String token, prefix, altprefix, helpWord, playlistsFolder, logLevel,
             successEmoji, warningEmoji, errorEmoji, loadingEmoji, searchingEmoji,
-            evalEngine;
+            evalEngine, googleClientsID, googleClientsSecret;
     private boolean youtubeOauth2, stayInChannel, songInGame, npImages, updatealerts, useEval, dbots;
     private long owner, maxSeconds, aloneTimeUntilStop;
     private int maxYTPlaylistPages;
@@ -85,6 +85,8 @@ public class BotConfig
             game = OtherUtil.parseGame(config.getString("game"));
             status = OtherUtil.parseStatus(config.getString("status"));
             youtubeOauth2 = config.getBoolean("youtubeoauth2");
+            googleClientsID = config.getString("googleClientsID");
+            googleClientsSecret = config.getString("googleClientsSecret");
             stayInChannel = config.getBoolean("stayinchannel");
             songInGame = config.getBoolean("songinstatus");
             npImages = config.getBoolean("npimages");
@@ -298,7 +300,16 @@ public class BotConfig
     {
         return youtubeOauth2;
     }
-    
+
+    public String getGoogleClientsID()
+    {
+        return googleClientsID;
+    }
+
+    public String getGoogleClientsSecret() {
+        return googleClientsSecret;
+    }
+
     public boolean getStay()
     {
         return stayInChannel;

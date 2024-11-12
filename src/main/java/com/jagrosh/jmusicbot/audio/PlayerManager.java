@@ -17,6 +17,7 @@ package com.jagrosh.jmusicbot.audio;
 
 import com.dunctebot.sourcemanagers.DuncteBotSources;
 import com.jagrosh.jmusicbot.Bot;
+import com.jagrosh.jmusicbot.MyYtAudioSourceManager;
 import com.jagrosh.jmusicbot.utils.OtherUtil;
 import com.sedmelluq.discord.lavaplayer.container.MediaContainerRegistry;
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
@@ -75,7 +76,10 @@ public class PlayerManager extends DefaultAudioPlayerManager
 
     private YoutubeAudioSourceManager setupYoutubeAudioSourceManager()
     {
-        YoutubeAudioSourceManager yt = new YoutubeAudioSourceManager(true);
+        YoutubeAudioSourceManager yt = new MyYtAudioSourceManager(true,
+                bot.getConfig().useYoutubeOauth2(),
+                bot.getConfig().getGoogleClientsID(),
+                bot.getConfig().getGoogleClientsSecret());
         yt.setPlaylistPageCount(bot.getConfig().getMaxYTPlaylistPages());
 
         // OAuth2 setup
